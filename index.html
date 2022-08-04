@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeCards</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<style>
+  *{
+    box-sizing: border-box;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .card-container {
+    border: 5px solid #062a41;
+    text-align: center;
+    background-color: #0d3f5e;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .card-container__name h4 {
+    text-transform: capitalize;
+  }
+
+  .search-container input[type=text]{
+    border-radius: 8px;
+  }
+
+  .search-container button{
+    border-radius: 6px;
+  }
+
+  .search-container button:hover{
+    font-weight: bold;
+  }
+</style>
+
+<body>
+
+  <section class="container">
+    <div class="card-container">
+      <div class="card-container__name">
+        <h4 class="text-4xl"></h4>
+        <h5 class="text-xl"></h5>
+      </div>
+      <div class="card-container__img">
+        <img class="mx-auto h-48 w-48">
+      </div>
+      <div class="px-2">
+        <a href="#" class="card-container__info block text-2xl">More info</a>
+        <button class="card-container__prev" class="text-xl inline-block w-fit">Prev</button>
+        <button class="card-container__next" class="text-xl inline-block w-fit">Next</button>
+      </div>
+    </div>
+
+    <section class="search-container">
+      <input type="text" placeholder="Poke name">
+      <button class="inline-block bg-blue-100 py-2 px-4 h-full">¡Catch!</button>
+    </section>
+  </section>
+
+
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>
